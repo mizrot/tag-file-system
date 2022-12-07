@@ -1,0 +1,69 @@
+% !TEX program = xelatex
+\documentclass[14pt, a4paper]{article}
+\usepackage[
+left=30mm, right=10mm, top=0mm,headheight=5mm]{geometry}
+\usepackage[style=footnote-dw]{biblatex}
+\usepackage{fontspec}
+\setmainfont{Grotte}
+\usepackage{calc,graphicx}
+\usepackage{fullpage , tikz}
+\usepackage{eso-pic}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\AddToShipoutPictureBG{%
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[color=white] (0, 0) circle[radius=4];
+  \draw[color=white] (0, 20) circle[radius=2];
+  \draw[color=white] (0, 30) circle[radius=4];
+  \draw (14.5, 28.5) -- (14.5,27) -- (16.5,29) -- (14.5,28.5);
+  \draw (17,27) circle [radius=1];
+\end{tikzpicture}%
+}
+\newlength\htG\newlength\dpg
+\protected\def\google{\settoheight{\htG}{G}\settodepth{\dpg}{g}%
+  \raisebox{-\dpg}{\includegraphics[height=\htG+\dpg]{google}}}
+\tcbset{
+    frame code={}
+    center title,
+    left=30mm,
+    right=10mm,
+    top=0pt,
+    bottom=5mm,
+    colback=white,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=0mm,
+    boxsep=5pt,
+    arc=0pt,outer arc=0pt,
+    }
+\begin{document}
+\pagecolor{black!95!blue!85}
+\color{white}
+  \renewcommand{\sfdefault}{ptm}\normalfont
+  \begin{center}
+  \section{Введение}
+\end{center}
+  \subsection{Обоснование выбора темы}
+    \begin{tcolorbox}[spread sidewards]
+    \textcolor{black}{
+      \begin{center}
+  \input{intro/reason.txt}
+\end{center}
+}
+    \end{tcolorbox}
+  \subsection{Актуальность}
+    \begin{tcolorbox}[spread sidewards]
+    \textcolor{black}{
+      \begin{center}
+    \input{intro/actual.txt}
+\end{center}
+}
+    \end{tcolorbox}
+  \subsection{Цель}
+    \input{intro/target.txt}
+  \subsection{Задачи}
+    \input{intro/task.txt}
+  \subsection{Гепотеза}
+    \input{intro/hypothesis.txt}
+\raggedright{}
+\end{document}
