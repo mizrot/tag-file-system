@@ -29,7 +29,7 @@ hFad(Hierarchical Filesystems are Dead) - file system based on objects, but unli
 ### API
 hFAD API consists of two components: naming interface and access interface. (see picture below)
 
-![diagram](hFAD_diagram.png)
+![[hFAD_diagram.png]]
 The naming interfaces map tagged search-terms to objects. After object was located, the access interface can operate.
 #### Naming Interfaces
 Object's name identifies by one or more tag/value pairs. A tag can tell how to interpret the value as well as in which index object's value is located. Nameing operations can return multiple items. Moreover, no query need uniquely define a data item. Only the identifier for the data in the OSD layer must be unique (object's ID).
