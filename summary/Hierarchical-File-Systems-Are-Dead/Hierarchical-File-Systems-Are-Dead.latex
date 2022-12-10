@@ -1,0 +1,48 @@
+% !TEX program = xelatex
+\documentclass[twocolumn, a4paper]{article}
+\usepackage[left=10mm, right=10mm]{geometry}
+\usepackage{graphicx}
+\graphicspath{./}
+\usepackage{hyperref}
+\usepackage{biblatex}
+ \bibliography{refs}
+\usepackage{array}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\title{Иерархические файловые системы мертвы.}
+\begin{document}
+\begin{titlepage}
+  \begin{flushleft}
+    \large{\textbf{Иерархические файловые системы мертвы.}} \\
+  \vspace{0.5cm}
+  Автор:Сельцер, Марго и Николас Мерфи. Гарвард. \\
+  Дата публикации: 21-ое сентября 2011 год  \\
+  Ссылка: \url{https://dash.harvard.edu/handle/1/5136361} \\
+  \vspace{17cm}
+  \begin{center}
+    Краткое содержание статьи
+  \end{center}
+\end{flushleft}
+\end{titlepage}
+\section{Введение}
+ \input{intro.txt}
+ \input{prons.txt}
+ \input{modern.txt}
+\section{Файловая система hFAD}
+ \input{hFad-dec.txt}
+\includegraphics[width=85mm]{hFAD_diagram.png}
+ \input{hFAD-api.txt}
+ \subsection{Интерфейс наименования}
+ \input{hFAD-name.txt}
+ \input{table.txt}
+ \subsection{Интерфейс доступа}
+ \input{hFAD-access.txt}
+ \subsubsection{Индексное хранилище}
+ \input{hFAD-index.txt}
+ \subsubsection{OSD слой}
+ \input{hFAD-OSD.txt}
+ \subsubsection{Реализация}
+ \input{hFAD-imp.txt}
+ \printbibliography[title=Ссылки]
+\end{document}
+

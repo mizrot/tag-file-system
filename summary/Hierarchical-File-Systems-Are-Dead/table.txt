@@ -1,0 +1,18 @@
+\begin{tabular}{ m{2cm} |m{2cm}| m{3cm}}
+\hline
+Использование & Тег & Значение \\
+\hline
+POSIX & POSIX & pathname \\
+\hline 
+Поиск & FULLTEXT & term \\
+\hline
+В ручную & USER & logname \\
+\hline
+& UDEF & annotations \\
+\hline 
+Приложение & APP & applicationname \\
+\hline
+FastPath & ID & object identifier \\
+\hline
+& USER & logname \\
+\end{tabular}
